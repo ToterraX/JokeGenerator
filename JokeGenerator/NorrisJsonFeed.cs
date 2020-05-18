@@ -50,8 +50,9 @@ namespace JokeGenerator
 		public static List<string> GetRandomJokes(int numberOfJokes, string category)
 		{
 			var jokes = new List<string>();
+			var loopCounter = 0;
 
-			while (jokes.Count < numberOfJokes)
+			while (jokes.Count < numberOfJokes && loopCounter < 20)
 			{
 				var newJoke = GetRandomJoke(category);
 
@@ -59,6 +60,8 @@ namespace JokeGenerator
 				{
 					jokes.Add(newJoke);
 				}
+
+				loopCounter++;
 			}
 
 			return jokes;
