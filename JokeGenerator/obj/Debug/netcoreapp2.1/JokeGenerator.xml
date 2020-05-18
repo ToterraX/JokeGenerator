@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>JokeGenerator</name>
+    </assembly>
+    <members>
+        <member name="T:JokeGenerator.JokeFlow">
+            <summary>
+            This class handles the 
+            </summary>
+        </member>
+        <member name="M:JokeGenerator.JokeFlow.#ctor">
+            <summary>
+            Creates an instance of the JokeFlow
+            </summary>
+        </member>
+        <member name="M:JokeGenerator.JokeFlow.Flow">
+            <summary>
+            the main question and answer flow for the program
+            </summary>
+        </member>
+        <member name="M:JokeGenerator.JokeFlow.Input">
+            <summary>
+            Reads input. Normally this is from the console but may be overriden.
+            </summary>
+            <returns>field inputed</returns>
+        </member>
+        <member name="M:JokeGenerator.JokeFlow.InputChar">
+            <summary>
+            Reads input. Normally this is from the console but may be overriden.
+            </summary>
+            <returns>field inputed</returns>
+        </member>
+        <member name="M:JokeGenerator.JokeFlow.Print(System.String)">
+            <summary>
+            Pr3ints output. Normally this is to the console but may be overriden.
+            </summary>
+            <param name="value">Value to output</param>
+        </member>
+        <member name="T:JokeGenerator.NorrisJsonFeed">
+            <summary>
+            Handles the communication with the Chuck Norris JSON API
+            </summary>
+        </member>
+        <member name="M:JokeGenerator.NorrisJsonFeed.GetRandomJoke(System.String)">
+            <summary>
+            Gets a single joke from the NorrisAPI
+            </summary>
+            <param name="category">The category passed in</param>
+            <returns>a string containing the joke</returns>
+        </member>
+        <member name="M:JokeGenerator.NorrisJsonFeed.GetRandomJokes(System.Int32,System.String)">
+            <summary>
+            Gets a multiple jokes from the NorrisAPI
+            </summary>
+            <param name="numberOfJokes">The number of jokes to return</param>
+            <param name="category">The category passed in</param>
+            <returns>a string containing the joke</returns>
+        </member>
+        <member name="M:JokeGenerator.NorrisJsonFeed.GetCategories">
+            <summary>
+             Fetches from the Chuck Norris API a list of categories.
+            </summary>
+            <returns>String of category names</returns>
+        </member>
+        <member name="T:JokeGenerator.PrivServJsonFeed">
+            <summary>
+            Handles the communication with the privServ JSON API (used to create random people)
+            </summary>
+        </member>
+        <member name="T:JokeGenerator.PrivServJsonFeed.Person">
+            <summary>
+            represents a person returned from the getName function
+            </summary>
+        </member>
+        <member name="P:JokeGenerator.PrivServJsonFeed.Person.FirstName">
+            <summary>
+            First Name
+            </summary>
+        </member>
+        <member name="P:JokeGenerator.PrivServJsonFeed.Person.LastName">
+            <summary>
+            Last Name
+            </summary>
+        </member>
+        <member name="M:JokeGenerator.PrivServJsonFeed.GetName">
+            <summary>
+            Fetches from the PrivServ API a randomly made up person.
+            </summary>
+            <returns>The dictionary object containing information about the person</returns>
+        </member>
+        <member name="T:JokeGenerator.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:JokeGenerator.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:JokeGenerator.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:JokeGenerator.Properties.Resources.CategoriesPath">
+            <summary>
+              Looks up a localized string similar to /jokes/categories.
+            </summary>
+        </member>
+        <member name="P:JokeGenerator.Properties.Resources.ChuckNorris">
+            <summary>
+              Looks up a localized string similar to Chuck Norris.
+            </summary>
+        </member>
+        <member name="P:JokeGenerator.Properties.Resources.ChuckNorrisApi">
+            <summary>
+              Looks up a localized string similar to https://api.chucknorris.io.
+            </summary>
+        </member>
+        <member name="P:JokeGenerator.Properties.Resources.PrivServApi">
+            <summary>
+              Looks up a localized string similar to https://names.privserv.com/api.
+            </summary>
+        </member>
+        <member name="P:JokeGenerator.Properties.Resources.RandomNamePath">
+            <summary>
+              Looks up a localized string similar to /jokes/random.
+            </summary>
+        </member>
+        <member name="T:JokeGenerator.Questions">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:JokeGenerator.Questions.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:JokeGenerator.Questions.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:JokeGenerator.Questions.CategoryTitle">
+             <summary>
+               Looks up a localized string similar to Categories
+            ----------.
+             </summary>
+        </member>
+        <member name="P:JokeGenerator.Questions.EnterCategory">
+            <summary>
+              Looks up a localized string similar to Please enter a category..
+            </summary>
+        </member>
+        <member name="P:JokeGenerator.Questions.HowManyJokes">
+            <summary>
+              Looks up a localized string similar to Please enter the number of jokes to receive (1-9)?.
+            </summary>
+        </member>
+        <member name="P:JokeGenerator.Questions.Instructions">
+             <summary>
+               Looks up a localized string similar to Instructions
+            ------------
+            Press c to get a list of categories.
+            Press r to get list of random jokes.
+            Press q to quit.
+            
+            Press ? fo get these instructions again.
+            .
+             </summary>
+        </member>
+        <member name="P:JokeGenerator.Questions.InvalidCategory">
+            <summary>
+              Looks up a localized string similar to Category &lt;category&gt; is not valid. Please choose from the following list:.
+            </summary>
+        </member>
+        <member name="P:JokeGenerator.Questions.InvalidNumber">
+            <summary>
+              Looks up a localized string similar to Sorry, &lt;key&gt; is invalid..
+            </summary>
+        </member>
+        <member name="P:JokeGenerator.Questions.PromptText">
+            <summary>
+              Looks up a localized string similar to Joke Generator\&gt;.
+            </summary>
+        </member>
+        <member name="P:JokeGenerator.Questions.QuitText">
+            <summary>
+              Looks up a localized string similar to Thankyou for using the Joke Generator!.
+            </summary>
+        </member>
+        <member name="P:JokeGenerator.Questions.UnexpectedError">
+            <summary>
+              Looks up a localized string similar to An unexpected error has occured. Please try again..
+            </summary>
+        </member>
+        <member name="P:JokeGenerator.Questions.WantToSpecifyCategory">
+            <summary>
+              Looks up a localized string similar to Do you wish to specify a category (y/n)?.
+            </summary>
+        </member>
+        <member name="P:JokeGenerator.Questions.WantToUseRandomName">
+            <summary>
+              Looks up a localized string similar to Do you wish to use a random name instead of Chuck Norris (y/n)?.
+            </summary>
+        </member>
+    </members>
+</doc>
