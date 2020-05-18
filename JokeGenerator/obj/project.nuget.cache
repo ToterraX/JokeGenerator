@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0DXl0u0y+4V4iAO/9+cwZO2fbWxLAD4DGptNFbdXvvg1WzHJxWS3/jthkWI8JYnLeRmOZS32cjU96rhkoqJbig==",
+  "dgSpecHash": "zs3+XUmtFrfuHgHbPXzYsmrO3pMyheHwxIDDPfTqbwWmU+/CiwxGni9lZxw/BnNA7WLJZ1X2rh71erCgcer+sQ==",
   "success": true,
-  "projectFilePath": "C:\\Dev\\test\\CS-Challenge\\JokeGenerator\\JokeGenerator.csproj",
+  "projectFilePath": "C:\\development\\JokeGenerator\\JokeGenerator\\JokeGenerator.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.app\\2.1.0\\microsoft.netcore.app.2.1.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.dotnetapphost\\2.1.0\\microsoft.netcore.dotnetapphost.2.1.0.nupkg.sha512",

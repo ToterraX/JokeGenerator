@@ -734,11 +734,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Dev\\test\\CS-Challenge\\JokeGenerator\\JokeGenerator.csproj",
+      "projectUniqueName": "C:\\development\\JokeGenerator\\JokeGenerator\\JokeGenerator.csproj",
       "projectName": "JokeGenerator",
-      "projectPath": "C:\\Dev\\test\\CS-Challenge\\JokeGenerator\\JokeGenerator.csproj",
+      "projectPath": "C:\\development\\JokeGenerator\\JokeGenerator\\JokeGenerator.csproj",
       "packagesPath": "C:\\Users\\mdrit\\.nuget\\packages\\",
-      "outputPath": "C:\\Dev\\test\\CS-Challenge\\JokeGenerator\\obj\\",
+      "outputPath": "C:\\development\\JokeGenerator\\JokeGenerator\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
