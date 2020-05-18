@@ -239,5 +239,38 @@ namespace JokeGeneratorTest
 
             Assert.Equal(Questions.QuitText, jokeFlow.outputBuffer[13]);
         }
+
+        /// <summary>
+        /// Check random joke path with:
+        /// money category specified
+        /// no random name
+        /// 9 jokes
+        /// 
+        /// Note: this is to deal with a potential infinite loop found during development
+        /// </summary>
+        [Fact]
+        public void RForRandomJokesPathNoInfinteLoop()
+        {
+            JokeFlowOverride jokeFlow = new JokeFlowOverride
+            {
+
+                // set the input buffer with the input that would be keyed in.
+                inputBuffer = new List<string>(new string[] { "r", "n", "y", "money", "9", "q" }),
+                outputBuffer = new List<string>()
+            };
+
+            jokeFlow.Flow();
+
+            // check that the output buffer has the correct data in it.
+            Assert.Equal(Questions.Instructions, jokeFlow.outputBuffer[0]);
+            Assert.Equal(Questions.WantToUseRandomName, jokeFlow.outputBuffer[1]);
+            Assert.Equal(Questions.WantToSpecifyCategory, jokeFlow.outputBuffer[2]);
+            Assert.Equal(Questions.EnterCategory, jokeFlow.outputBuffer[3]);
+            Assert.Equal(Questions.HowManyJokes, jokeFlow.outputBuffer[4]);
+            Assert.Contains("chuck norris", jokeFlow.outputBuffer[5].ToLower());
+            Assert.Contains("chuck norris", jokeFlow.outputBuffer[6].ToLower());
+            // despite asking for 9 jokes, there are only 2 jokes from the api
+            Assert.Equal(Questions.QuitText, jokeFlow.outputBuffer[7]);
+        }
     }
 }
