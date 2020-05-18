@@ -63,7 +63,6 @@ namespace JokeGenerator
             Console.Write(Questions.PromptText);
             var returnValue = Console.ReadLine();
             Console.WriteLine();
-            Console.WriteLine();
 
             return returnValue;
         }
@@ -97,13 +96,9 @@ namespace JokeGenerator
 
         private void PrintRandomJokes()
         {
-            string category;
-            PrivServJsonFeed.Person person;
-            int numberJokes;
-
-            person = AskRandomName();
-            category = AskCategory();
-            numberJokes = AskNumberJokes();
+            PrivServJsonFeed.Person person = AskRandomName();
+            string category = AskCategory();
+            int numberJokes = AskNumberJokes();
 
             PrintJokes(category, person, numberJokes);
         }
