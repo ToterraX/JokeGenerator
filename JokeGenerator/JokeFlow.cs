@@ -98,21 +98,23 @@ namespace JokeGenerator
         private void PrintRandomJokes()
         {
             string category;
-            string name;
+            PrivServJsonFeed.Person person;
             int numberJokes;
 
-            name = AskRandomName();
+            person = AskRandomName();
             category = AskCategory();
             numberJokes = AskNumberJokes();
 
-            PrintJokes(category, name, numberJokes);
+            PrintJokes(category, person, numberJokes);
         }
 
-        private void PrintJokes(string category, string name, int numberJokes)
+        private void PrintJokes(string category, PrivServJsonFeed.Person person, int numberJokes)
         {
             foreach (var item in NorrisJsonFeed.GetRandomJokes(numberJokes, category))
             {
-                Print(item.Replace(Resources.ChuckNorris, name, StringComparison.CurrentCultureIgnoreCase));
+                string newItem = item.Replace(Resources.Chuck, person.FirstName, StringComparison.CurrentCultureIgnoreCase);
+                newItem = newItem.Replace(Resources.Norris, person.LastName, StringComparison.CurrentCultureIgnoreCase);
+                Print(newItem);
             }
         }
 
@@ -169,21 +171,21 @@ namespace JokeGenerator
             }
         }
 
-        private string AskRandomName()
+        private PrivServJsonFeed.Person AskRandomName()
         {
-            string name;
+            PrivServJsonFeed.Person person;
+
             Print(Questions.WantToUseRandomName);
             if (InputChar().ToLower() == "y")
             {
-                PrivServJsonFeed.Person person = PrivServJsonFeed.GetName();
-                name = person.FirstName + " " + person.LastName;
+                person = PrivServJsonFeed.GetName();
             }
             else
             {
-                name = Resources.ChuckNorris;
+                person = new PrivServJsonFeed.Person { FirstName = Resources.Chuck, LastName = Resources.Norris };
             }
 
-            return name;
+            return person;
         }
 
         private void PrintCategories()

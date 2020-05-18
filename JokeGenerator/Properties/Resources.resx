@@ -120,11 +120,17 @@
   <data name="CategoriesPath" xml:space="preserve">
     <value>/jokes/categories</value>
   </data>
+  <data name="Chuck" xml:space="preserve">
+    <value>Chuck</value>
+  </data>
   <data name="ChuckNorris" xml:space="preserve">
     <value>Chuck Norris</value>
   </data>
   <data name="ChuckNorrisApi" xml:space="preserve">
     <value>https://api.chucknorris.io</value>
+  </data>
+  <data name="Norris" xml:space="preserve">
+    <value>Norris</value>
   </data>
   <data name="PrivServApi" xml:space="preserve">
     <value>https://names.privserv.com/api</value>

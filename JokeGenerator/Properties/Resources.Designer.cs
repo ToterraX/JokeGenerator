@@ -70,6 +70,15 @@ namespace JokeGenerator.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Chuck.
+        /// </summary>
+        internal static string Chuck {
+            get {
+                return ResourceManager.GetString("Chuck", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Chuck Norris.
         /// </summary>
         internal static string ChuckNorris {
@@ -84,6 +93,15 @@ namespace JokeGenerator.Properties {
         internal static string ChuckNorrisApi {
             get {
                 return ResourceManager.GetString("ChuckNorrisApi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Norris.
+        /// </summary>
+        internal static string Norris {
+            get {
+                return ResourceManager.GetString("Norris", resourceCulture);
             }
         }
         
