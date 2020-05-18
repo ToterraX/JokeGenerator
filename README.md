@@ -12,5 +12,7 @@ I heavily re-worked the laughably bad code. This included but is not limited to:
 
 ### Task 2 - Write a report ###
 
-Report is included below in the project directory.
+Two reports are included below in the project directory.
+* Review.doc - Comments to the hypothetical developer who wrote this application.
+* Changes.doc - Discussion about what changes I made and why.
 
